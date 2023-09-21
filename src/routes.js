@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import { Main, Register, Notfound } from "./pages";
+import { Main, Register, RegisterComplete, RegisterIntegrated, Notfound } from "./pages";
 import { LayoutProvider } from "./Layout";
 
 const AppRoutes = () => {
@@ -10,7 +10,9 @@ const AppRoutes = () => {
       element: <LayoutProvider />,
       children: [
         { path: "/", element: <Main title="Main" />},
-        { path: "/register", element: <Register title="회원가입" />},
+        { path: "/signup", element: <Register title="회원가입" />},
+        { path: "/signup/integrated", element: <RegisterIntegrated title="통합 회원가입" />},
+        { path: "/signup/complete", element: <RegisterComplete title="가입완료" />},
         { path: "*",  element: <Notfound title="Notfound" />}
       ]
     }

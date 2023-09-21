@@ -262,17 +262,27 @@ img {vertical-align: top}
   border: 1px solid #D1D5E6;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
 }
 .attachment-form input[type="file"] {
-  visibility: hidden;
-  height: 1px;
-  width: 1px;
-  margin: 0 0;
-  padding: 0 0;
+  /*visibility: hidden;*/
+  /*height: 1px;*/
+  /*width: 1px;*/
+  /*margin: 0 0;*/
+  /*padding: 0 0;*/
+  margin-top: -40px;
+  position: absolute;
+  z-index: 0;
+  width: 682px;
 }
 
 .form-container .attachment-form.half {
   width: 50%;
+}
+.form-container .attachment-form.half input[type="file"] {
+  width: 341px;
 }
 .form-container .download-area {
   float: right;
@@ -330,10 +340,40 @@ a.download-link {
   padding: 16px 0;
   text-align: center;
 }
+.foot-submit-area button[type="submit"] {
+  width: 684px;
+  height: 56px;
+}
 
 hr {
   width: 724px;
   margin: 40px auto;
   border-color: #D1D5E6;
   opacity: 1;
+}
+
+.complete-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+.service-register-complete {
+  flex: 0 1 724px;
+  width: 724px;
+}
+.service-register-complete h1 {
+  margin: 0 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #363A4D;
+}
+.service-register-complete p {
+  margin: 0 0 40px 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #363A4D;
 }

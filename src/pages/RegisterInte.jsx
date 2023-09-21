@@ -6,7 +6,7 @@ import {Form, Button, Accordion, Table} from "react-bootstrap";
 import logo from "../assets/logo.svg";
 import iconDelete from "../assets/error-fill.svg";
 
-const Register = () => {
+const RegisterIntegrated = () => {
 
   const navigate = useNavigate();
 
@@ -32,7 +32,22 @@ const Register = () => {
     {head: "과세 종류",  body: "일반 과세"},
   ];
 
+  const managerInfoData = [
+    {head: "상점 담당자명",  body: "test"},
+    {head: "상점 담당자 이메일",  body: "dasom.kim@sellerhub.co.kr"},
+    {head: "상점 담당자 연락처",  body: "010.****.5678"},
+    {head: "상점 담당자 휴대폰번호",  body: "010.****.1130"},
+  ];
+
+  const bankInfoData = [
+    {head: "거래은행",  body: "신한은행(008)"},
+    {head: "정산 계좌번호",  body: "110292****98"},
+    {head: "예금주명",  body: "김다솜"},
+  ];
+
   const [fields, setFields] = useState(initialFields);
+
+  const [validated, setValidated] = useState(false);
 
   // 파일 선택 핸들러
   const handleFileChange = (event, index) => {
@@ -87,54 +102,6 @@ const Register = () => {
       </h1>
 
       <Form onSubmit={handleSubmit}>
-        <div className="form-container">
-          <h2>상점 담당자 정보</h2>
-          <Form.Group controlId="ControlInput1">
-            <Form.Label>담당자명</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group controlId="ControlInput2">
-            <Form.Label>담당자 연락처</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group controlId="ControlInput3">
-            <Form.Label>담당자 휴대폰 번호</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group controlId="ControlInput4">
-            <Form.Label>담당자 이메일</Form.Label>
-            <Form.Control type="email" required />
-          </Form.Group>
-
-          <div className="info-box mt-4">
-            <p>공급사 정보의 “영업 담당자 정보”가 “상점 담당자”로 지정되요.</p>
-          </div>
-        </div>
-
-        <div className="form-container">
-          <h2>빠른정산 담당자 정보</h2>
-          <Form.Group controlId="ControlInput5">
-            <Form.Label>거래 은행</Form.Label>
-            <Form.Select aria-label="은행은 선택해 주세요">
-              <option>은행을 선택해 주세요</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group controlId="ControlInput6">
-            <Form.Label>담당자 연락처</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group controlId="ControlInput7">
-            <Form.Label>담당자 휴대폰 번호</Form.Label>
-            <Form.Control type="text" required />
-          </Form.Group>
-          <Form.Group controlId="ControlInput8">
-            <Form.Label>담당자 이메일</Form.Label>
-            <Form.Control type="email" required />
-          </Form.Group>
-        </div>
 
         <div className="form-container">
           <h2>첨부 파일</h2>
@@ -189,7 +156,44 @@ const Register = () => {
           </Accordion.Item>
         </Accordion>
 
-        <hr />
+        <Accordion defaultActiveKey="0" className="user-ref-data">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>상점 담당자 정보</Accordion.Header>
+            <Accordion.Body>
+              <Table striped borderless className="table-type-info">
+                <tbody>
+                {managerInfoData && managerInfoData.map((info, index) => (
+                  <tr key={index}>
+                    <th>{info.head}</th>
+                    <td className="text-end">{info.body}</td>
+                  </tr>
+                ))}
+                </tbody>
+              </Table>
+              <div className="info-box mt-4">
+                <p>공급사 정보의 “영업 담당자 정보”가 “상점 담당자”로 지정되요.</p>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+
+        <Accordion defaultActiveKey="0" className="user-ref-data">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>업체 정보</Accordion.Header>
+            <Accordion.Body>
+              <Table striped borderless className="table-type-info">
+                <tbody>
+                {bankInfoData && bankInfoData.map((info, index) => (
+                  <tr key={index}>
+                    <th>{info.head}</th>
+                    <td className="text-end">{info.body}</td>
+                  </tr>
+                ))}
+                </tbody>
+              </Table>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
 
         <div className="form-container">
           <h2>정보 수신 동의</h2>
@@ -213,6 +217,7 @@ const Register = () => {
                   label="SMS"
                   checked={agreements.sms}
                   onChange={handleAgreementChange}
+                  required
                 />
               </li>
               <li>
@@ -223,6 +228,7 @@ const Register = () => {
                   label="이메일"
                   checked={agreements.email}
                   onChange={handleAgreementChange}
+                  required
                 />
               </li>
             </ul>
@@ -231,7 +237,7 @@ const Register = () => {
 
         <div className="foot-submit-area">
           <Button variant="primary" type="submit">
-            회원가입
+            통합 회원가입
           </Button>
         </div>
       </Form>
@@ -240,4 +246,4 @@ const Register = () => {
   )
 }
 
-export { Register }
+export { RegisterIntegrated }
