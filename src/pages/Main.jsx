@@ -5,10 +5,12 @@ import shicon from "../assets/sellerhub-hexagon.svg";
 import icoRocket from  "../assets/ico-recket.svg"
 import icoDollar from  "../assets/ico-dollar.svg"
 import logo from "../assets/logo.svg";
+import arrowDown from "../assets/chevron-down.svg"
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import {Accordion, AccordionContext, Card, Form, useAccordionButton} from "react-bootstrap";
 import {useContext, useState} from "react";
+import { Document1, Document2 } from "../components";
 
 const Main = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -154,10 +156,12 @@ const Main = () => {
                       checked={agreements.agree1}
                       onChange={handleAgreementChange}
                     />
-                    <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
+                    <ContextAwareToggle eventKey="0"><img src={arrowDown} alt="열기" /></ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I am the body</Card.Body>
+                    <Card.Body>
+                      <Document1 />
+                    </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card>
@@ -170,10 +174,12 @@ const Main = () => {
                       checked={agreements.agree2}
                       onChange={handleAgreementChange}
                     />
-                    <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
+                    <ContextAwareToggle eventKey="1"><img src={arrowDown} alt="열기" /></ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>Hello! I am another body</Card.Body>
+                    <Card.Body>
+                      <Document2 />
+                    </Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
@@ -234,10 +240,12 @@ const Main = () => {
                       checked={agreements.agree1}
                       onChange={handleAgreementChange}
                     />
-                    <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
+                    <ContextAwareToggle eventKey="0"><img src={arrowDown} alt="열기" /></ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I am the body</Card.Body>
+                    <Card.Body>
+                      <Document1 />
+                    </Card.Body>
                   </Accordion.Collapse>
                 </Card>
                 <Card>
@@ -250,10 +258,12 @@ const Main = () => {
                       checked={agreements.agree2}
                       onChange={handleAgreementChange}
                     />
-                    <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
+                    <ContextAwareToggle eventKey="1"><img src={arrowDown} alt="열기" /></ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>Hello! I am another body</Card.Body>
+                    <Card.Body>
+                      <Document2 />
+                    </Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Accordion>

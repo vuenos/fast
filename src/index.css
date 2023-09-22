@@ -142,7 +142,14 @@ img {vertical-align: top}
   background: #fff;
 }
 .custom-accor button {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: #fff;
   margin-left: auto;
+}
+.custom-accor button.open img {
+  transform: rotate(3.142rad);
 }
 .custom-accor .form-check-label,
 .check-all .form-check-label {
