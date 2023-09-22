@@ -115,7 +115,7 @@ const Register = () => {
           <h2>빠른정산 담당자 정보</h2>
           <Form.Group controlId="ControlInput5">
             <Form.Label>거래 은행</Form.Label>
-            <Form.Select aria-label="은행은 선택해 주세요">
+            <Form.Select aria-label="은행을 선택해 주세요">
               <option>은행을 선택해 주세요</option>
               <option value="">IBK기업은행</option>
               <option value="">KB국민은행</option>
@@ -124,26 +124,17 @@ const Register = () => {
               <option value="">SC제일은행</option>
               <option value="">신한은행</option>
               <option value="">우리은행</option>
-              <option value="">하나은행</option>
+              <option value="">KEB하나은행</option>
               <option value="">카카오뱅크</option>
               <option value="">케이뱅크</option>
               <option value="">한국씨티은행</option>
-              <option value="">새마을금고</option>
-              <option value="">우체국</option>
-              <option value="">신협</option>
-              <option value="">SH수협은행</option>
+              <option value="">수협중앙회</option>
               <option value="">경남은행</option>
               <option value="">광주은행</option>
               <option value="">대구은행</option>
               <option value="">부산은행</option>
               <option value="">전북은행</option>
-              <option value="">OK저축은행</option>
-              <option value="">SBI저축은행</option>
-              <option value="">저축은행중앙회</option>
-              <option value="">산림조합중앙회</option>
-              <option value="">신한금융투자</option>
-              <option value="">미래에셋증권</option>
-              <option value="">애큐온축은행</option>
+              <option value="">제주은행</option>
             </Form.Select>
           </Form.Group>
           <Form.Group controlId="ControlInput6">
