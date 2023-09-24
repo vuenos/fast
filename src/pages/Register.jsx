@@ -19,7 +19,7 @@ const Register = () => {
     { label: "사업자 등록증 첨부", file: null },
     { label: "입금 계좌 사본", file: null },
     { label: "대표자 신분증 사본", file: null },
-    { label: "PG 서비스 신청서", file: null, type: "half" },
+    // { label: "PG 서비스 신청서", file: null, type: "half" },
   ];
 
   const companyInfoData = [
@@ -157,7 +157,7 @@ const Register = () => {
             <ul>
               <li>확장자 “jpg, jpeg, png” 형식의 이미지 파일만 첨부 가능합니다.</li>
               <li>입금 계좌 사본 첨부 시 위 [정산]에 표기된 계좌정보의 [통장사본]을 첨부하여야 심사가 시작되요.</li>
-              <li>PG 서비스 신청서(개인)상의 인감은 통장사본에 인감이 날인된 경우는 서명으로 대체 불가하며, 통장사본에 서명을 하신 경우에만 서명으로 대체 가능합니다.</li>
+              {/*<li>PG 서비스 신청서(개인)상의 인감은 통장사본에 인감이 날인된 경우는 서명으로 대체 불가하며, 통장사본에 서명을 하신 경우에만 서명으로 대체 가능합니다.</li>*/}
             </ul>
           </div>
           {fields.map((field, index) => (
@@ -179,9 +179,9 @@ const Register = () => {
               )}
             </Form.Group>
           ))}
-          <div className="download-area">
-            <a href="#" className="download-link" rel="noreferrer">신청서 양식 다운로드</a>
-          </div>
+          {/*<div className="download-area">*/}
+          {/*  <a href="#" className="download-link" rel="noreferrer">신청서 양식 다운로드</a>*/}
+          {/*</div>*/}
         </div>
 
         <hr />
