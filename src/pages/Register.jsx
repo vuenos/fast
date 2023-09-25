@@ -106,9 +106,9 @@ const Register = () => {
             <Form.Control type="email" required />
           </Form.Group>
 
-          <div className="info-box mt-4">
-            <p>공급사 정보의 “영업 담당자 정보”가 “상점 담당자”로 지정되요.</p>
-          </div>
+          {/*<div className="info-box mt-4">*/}
+          {/*  <p>공급사 정보의 “영업 담당자 정보”가 “상점 담당자”로 지정되요.</p>*/}
+          {/*</div>*/}
         </div>
 
         <div className="form-container">
